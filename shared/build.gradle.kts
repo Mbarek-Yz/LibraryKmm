@@ -54,11 +54,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/your-username/your-repository")
-            credentials {
-                username = "your-username"
-                password = System.getenv("GITHUB_TOKEN") // Use environment variable for security
-            }
+            url = uri("https://github.com/Mbarek-Yz/LibraryKmm.git")
         }
 
     }

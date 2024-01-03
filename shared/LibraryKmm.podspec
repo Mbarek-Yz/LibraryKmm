@@ -1,14 +1,19 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'shared'
-    spec.version                  = '1.0'
-    spec.homepage                 = 'Link to the Shared Module homepage'
-    spec.source                   = { :http=> ''}
-    spec.authors                  = ''
-    spec.license                  = ''
+    spec.name                     = 'LibraryKmm'
+    spec.version                  = '1.0.0'
+    spec.homepage                 = 'https://github.com/Mbarek-Yz/LibraryKmm'
+    spec.license		  = { :type => 'MIT', :file => 'LICENSE' }
+    spec.source = { :git => 'https://github.com/Mbarek-Yz/LibraryKmm.git', :branch => 'main' }
+    spec.authors                  = { 'Yazan MBAREK' => 'mbarekyazen16@gmail.com'}
     spec.summary                  = 'Some description for the Shared Module'
     spec.vendored_frameworks      = 'build/cocoapods/framework/shared.framework'
     spec.libraries                = 'c++'
-    spec.ios.deployment_target = '16.0'
+    spec.ios.deployment_target = '15.0'
+    
+    spec.source_files = 'shared/src/main/kotlin/**/*.{kt,kts}'
+    spec.dependency 'Kotlin/Native'
+
+
                 
                 
     if !Dir.exist?('build/cocoapods/framework/shared.framework') || Dir.empty?('build/cocoapods/framework/shared.framework')
